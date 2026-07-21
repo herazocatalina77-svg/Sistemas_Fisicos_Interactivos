@@ -16,5 +16,8 @@ n(`<
 .sound("piano")
 sound("bd*4,~ rim ~ cp").slow(2)
 note("c3 eb3 g3").s("sawtooth").vowel("<a e i o>")
+note("c2 <eb2 <g2 g1>>".fast(2))
+.sound("<sawtooth square triangle sine>")
+._scope()
 ```
 
