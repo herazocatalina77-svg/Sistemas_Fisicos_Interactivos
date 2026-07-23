@@ -1,5 +1,5 @@
 # Unidad 1 código strudel
-```
+``` js
 stack(
   setcpm(65),
   //parte estrofa
