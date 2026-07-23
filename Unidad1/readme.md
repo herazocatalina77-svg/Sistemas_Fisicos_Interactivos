@@ -1,4 +1,4 @@
-# Diario de la unidad 1
+# Diario de la unidad 1-práctica borrador
 ``` js
 sound ("bd^ hh sd oh")
 setcpm(45);
