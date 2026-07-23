@@ -1,5 +1,5 @@
 # Unidad 1 código strudel
-´´´
+```
 stack(
   setcpm(65),
   //parte estrofa
@@ -60,4 +60,4 @@ stack(
     .mask("<0!16 1!16>")
     .gain(0.3),
 )
-´´´
+```
