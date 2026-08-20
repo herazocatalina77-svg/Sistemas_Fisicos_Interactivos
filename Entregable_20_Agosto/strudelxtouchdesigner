@@ -1,0 +1,29 @@
+```
+// Define the custom parameter used by the Router.
+const { visualid } = createParams('visualid')
+
+setcpm(14.5)
+
+const drums = stack(
+  s("oh:1").beat("3,5,9,13", 16).visualid("drum_oh"),
+  s("hh").beat("0,1,4,6,8,10,12,14", 16).visualid("drum_hh"),
+  s("cp").beat("4,12", 16).visualid("drum_cp"),
+  s("bd").beat("0,2,3,7,9,10,15", 16).visualid("drum_bd")
+).bank("RolandTr90")
+
+const melody = note("c4 c4 e4 g4 e4 e4 ~ d4 c4 a3 a3 a3 ~ d4 d4 c4")
+  .sound("gm_clavinet")
+  .legato(1)
+  .visualid("ambient")
+
+const harmony = note("<[f3,a3,c4,e4] [g3,b3,d4,e4] [e3,g3,b3,d4] [a3,c4,e4,b4]>")
+  .sound("piano")
+  .visualid("harmony")
+
+$drums: stack(drums, drums.osc())
+$melody: stack(melody, melody.osc())
+$harmony: stack(harmony, harmony.osc())
+$: s("bd").osc()
+// For independent chord voices, use distinct IDs instead of one harmony slot:
+// .visualid("harmony_bass"), .visualid("harmony_mid1"), etc.
+```
