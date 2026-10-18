@@ -1,1 +1,15 @@
+ ```
+const { visualiid } = createParams('visualid')
 
+setcpm(24.5)
+
+const drums = stack(
+sound("AikaiLinn").visualid("sound_AikaiLinn"),
+sound ("bd bd").visualid("drums_bd"),
+sound ("hh hh hh*2").visualid("drums_hh"),
+sound ("rim").visualid("drums_rim"),
+sound("<bd bd bd bd>*4").visualid("drums2_bd"),
+sound("<oh> <oh>").visualid("drums_oh")
+)
+$drums: stack(drums, drums.osc())
+```
